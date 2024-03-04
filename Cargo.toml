@@ -7,9 +7,9 @@ edition = "2021"
 
 [dependencies]
 # If you want to try (experimental) std support, add `features = [ "std" ]` to risc0-zkvm
-#risc0-zkvm = { version = "0.20.1", default-features = ["std"] }
+risc0-zkvm = { version = "0.20.1", default-features = false, features = ["std"] }
 #risc0-zkvm = { version = "0.20.1", default-features = false }
-risc0-zkvm = {path = "../../../risc0/risc0/zkvm", default-features = false}
+#risc0-zkvm = {path = "../../../risc0/risc0/zkvm", default-features = false}
 #c-kzg = "0.4.1"
-c-kzg = {path = "../../../c-kzg-4844/bindings/rust"}
+c-kzg = {path = "../../../c-kzg-4844/bindings/rust", default-features = false, features=["std"] }
 #kzg = {git = "https://github.com/ralexstokes/kzg.git"}
